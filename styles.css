@@ -32,7 +32,6 @@ GENERAL STYLES
 html {
   font-family: 'Ruda', sans-serif;
 	font-size: 125%; /* setting font-size default to 20px*/
-	line-height: 1.5;
 }
 
 .wrapper {
@@ -41,18 +40,19 @@ html {
   margin: 0 auto;
 }
 
-h1, h2, h3, h4, li, p, a {
+h1, h2, h3, h4, li {
+	font-family: 'Roboto Slab', serif;
+	font-weight: bold;
   margin: 0;
   padding: 0;
 }
 
-h2,
-h3 {
-	font-family: 'Playfair Display', serif;
-	font-weight: bold;
+h1 {
+	font-size: 2.5rem; /* font size of 35px*/
 }
 
 h2 {
+	font-weight: bold;
 	font-size: 1.75rem; /* font size of 35px*/
 }
 
@@ -61,18 +61,10 @@ h4 {
 	font-size: 1.2rem; /* font size of 24px*/
 }
 
-h4 {
-	font-weight: bold;
-}
 
-button {
-	font-size: 1rem;  /* font size of 16px - I strongly recommend at least 18px for accessibility*/
-	font-weight: bold;
-	text-transform: uppercase;
-}
-
+button,
 p {
-		font-size: 1rem; /* font size of 16px - I strongly recommend at least 18px for accessibility*/
+	font-size: 1rem;
 }
 
 img {
@@ -87,19 +79,48 @@ ul {
 
 a {
 	text-decoration: none; 
-	/* color: white;	 */
+	cursor: pointer;
 }
 
 button {
-	background-color: #E7A8E6;
 	border: 0;
-	padding: 15px 30px;
 }
 
 
 /* =====================
 HEADER STYLES
 ===================== */
+header {
+	background-color: #cccccc;
+	padding: 3rem 0;
+  /* height:100vh; */
+	min-height: 50vh;
+  position:relative
+}
+
+.headerContent {
+	display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 0;
+  height:100%;
+}
+
+nav {
+	display: flex;
+	text-align: right;
+	justify-content: space-between;
+}
+
+nav ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+nav ul li {
+	flex:1 0 33.33%;
+}
 
 
 /* =====================
