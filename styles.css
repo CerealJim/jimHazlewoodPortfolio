@@ -100,6 +100,7 @@ header {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: flex-end;
+	padding-top: 1rem;
 }
 
 .navList {
@@ -109,11 +110,6 @@ header {
 	justify-content: space-between;
 	padding: 15px 0;
 	margin-right: -1rem;
-}
-
-.navList li {
-	padding:0 1rem;
-	text-transform: uppercase;
 }
 
 .hamburger {
@@ -127,6 +123,8 @@ header {
 .hamburger {
 	color: #003399;
 	transition: 0.5s ease;
+	padding:1rem 1rem;
+	text-transform: uppercase;
 }
 
 .navLink:hover,
@@ -134,7 +132,9 @@ header {
 .navLInk:focus,
 .hamburger:focus {
 	color: #FF9933;
+	background-color: #c2c2c2;
 }
+
 
 h1 {
 	padding-bottom: 1.5rem;
@@ -181,13 +181,46 @@ h3 {
 ABOUT STYLES
 ===================== */
 
+.about {
+	padding:4rem 0;
+}
+
+.aboutContainer {
+	display:flex;
+	flex: row wrap;
+}
+
+.aboutContent {
+	width: calc(60% - 2rem);
+	margin-right: 2rem;
+}
+
+.aboutFacts {
+	width: 40%;
+	display: flex;
+	flex: row wrap;
+}
+
+.aboutBox {
+	margin: .5rem;
+	width: 100px;
+	/* height: auto; */
+	border: 1px solid black;
+	box-shadow: 5px 10px #888888;
+}
 
 /* =====================
 EXPERIENCE AND SKILL STYLES
 ===================== */
 .experience {
 	background-color: #99cccc;
+	padding:4rem 0;
 	color: white;
+}
+
+.iconContainer {
+	display:flex;
+	justify-content: space-between;
 }
 
 
@@ -196,6 +229,31 @@ PROJECT STYLES
 ===================== */
 .portfolio {
 	background-color: #cccccc;
+}
+
+.projectContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+.project {
+	display: flex;
+}
+
+.projectImg {
+	width: 8rem;
+	height: 4.5rem;
+	/* height: auto; */
+}
+
+.projectInfo {
+	display: flex;
+	flex-direction: column;
+}
+
+.devTools {
+	display: flex;
+	flex-direction: row;
 }
 
 
@@ -237,9 +295,17 @@ MEDIA QUERIES - Desktop first to mobile
 		width: 100%;
 	}
 
-	.navList.active{
+	.navList.active {
 		display:flex;
+		/* margin-left:-1rem; */
 		flex-direction: column;
+	}
+	.headerNav.active {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	.hamburger.active {
+		/* background-color: rgba(0, 0, 0, 0.5); */
 	}
 	
 	.hamburger {
@@ -249,12 +315,21 @@ MEDIA QUERIES - Desktop first to mobile
 		padding: 1rem 0;
 	}
 	
-	.headerImg{
+	.headerImg {
 		display: none;
 	}
-	.headerText{
+	.headerText {
 		padding: 2rem 0;
 	}
+
+	h1 {
+		font-size: 2.55rem;
+	}
+
+	.helloText {
+		font-size: 1.25rem;
+	}
+
 }
 
 /* responsive design for phones */
