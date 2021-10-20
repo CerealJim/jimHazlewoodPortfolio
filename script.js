@@ -1,11 +1,6 @@
-// const navHamburger = document.querySelector(".hamburger")
-// const desktopNav = document.querySelector(".deskTopNav")
+const navHamburger = document.querySelector(".hamburger")
+const navList = document.querySelector(".navList")
 
-// navHamburger.addEventListener("click", () => {
-//   navHamburger.classList.toggle("active");
-// })
-
-// document.querySelectorAll(".navItem").forEach("click",() => {
-//   navHamburger.classList.remove("active");
-//   desktopNav.classList.remove("active");
-// })
+navHamburger.addEventListener("click", () => {
+  navList.classList.toggle("active");
+})

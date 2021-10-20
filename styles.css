@@ -95,40 +95,43 @@ header {
 	background-color: #f1f1f1;
 }
 
-.headerContent {
-	display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .headerNav {
 	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: flex-end;
 }
 
-.headerNav ul {
+.navList {
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	padding: 15px 0;
 	margin-right: -1rem;
 }
 
-.headerNav li {
+.navList li {
 	padding:0 1rem;
 	text-transform: uppercase;
 }
 
-.headerNav li a,
-.headerNav li a:visited,
 .hamburger {
-	color: #003399;
-	transition: 0.8s ease;
+	display: none;
+	font-size: 1.5rem;
+	color:#003399;
+	cursor: pointer;
 }
 
-.headerNav li a:hover,
+.navLink,
+.hamburger {
+	color: #003399;
+	transition: 0.5s ease;
+}
+
+.navLink:hover,
 .hamburger:hover,
-.headerNav li a:focus,
+.navLInk:focus,
 .hamburger:focus {
 	color: #FF9933;
 }
@@ -154,8 +157,7 @@ h3 {
 	
 }
 
-
-.nameTextHeader {
+.helloText {
 	font-family: 'Ruda', sans-serif;
 	display:block;
 	font-size: 1.75rem;
@@ -171,12 +173,7 @@ h3 {
 	height: auto;
 }
 
-.hamburger {
-	display: none;
-	font-size: 1rem;
-	color:#003399;
-	cursor: pointer;
-}
+
 
 
 
@@ -235,21 +232,28 @@ MEDIA QUERIES - Desktop first to mobile
 
 /* responsive design for tablets */
 @media (max-width: 768px) {
-	.hamburger {
+	.navList{
+		display: none;
+		width: 100%;
+	}
+
+	.navList.active{
 		display:flex;
+		flex-direction: column;
+	}
+	
+	.hamburger {
+		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding:1rem 0;
-	}
-	.desktopNav{
-		display: none;
+		padding: 1rem 0;
 	}
 	
 	.headerImg{
-		display:none;
+		display: none;
 	}
 	.headerText{
-		padding:2rem 0;
+		padding: 2rem 0;
 	}
 }
 
