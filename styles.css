@@ -49,11 +49,30 @@ h1, h2, h3, h4, li {
 
 h1 {
 	font-size: 4rem;
+	text-shadow: 3px 3px #cccccc;
 }
 
 h2 {
+	display: inline-block;
+	z-index: 1;
+	text-shadow: 2px 2px #cccccc;
 	font-weight: bold;
 	font-size: 1.75rem;
+	padding-bottom: 1rem;
+	position:relative
+}
+
+h2::after {
+	content: "";
+	background-color: #FF9933;
+	position:absolute;
+	left:-.25rem;
+	top: .5rem;
+	z-index: -1;
+	width:120%;
+	height:50%;
+	letter-spacing: 1px;
+	text-transform: uppercase;
 }
 
 h3,
@@ -65,6 +84,7 @@ h4 {
 button,
 p {
 	font-size: 1rem;
+	margin: 0;
 }
 
 img {
@@ -99,8 +119,24 @@ header {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: flex-end;
+	justify-content: space-between;
 	padding-top: 1rem;
+}
+
+.logoContainer {
+	width:3rem;
+	height:auto;
+	display:flex;
+}
+.logoContainer img{
+	width: 100%;
+	height: 100%;
+}
+
+.logoLink {
+	display:flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .navList {
@@ -131,8 +167,8 @@ header {
 .hamburger:hover,
 .navLInk:focus,
 .hamburger:focus {
-	color: #FF9933;
-	background-color: #c2c2c2;
+	color: #ff9933;
+	background-color: #ffffff;
 }
 
 
@@ -187,26 +223,56 @@ ABOUT STYLES
 
 .aboutContainer {
 	display:flex;
-	flex: row wrap;
+	flex-flow: row nowrap;
+	justify-content: space-between;
 }
 
 .aboutContent {
-	width: calc(60% - 2rem);
+	width: calc(100% - 2rem - (7.95rem * 2 + .5rem));
 	margin-right: 2rem;
 }
 
-.aboutFacts {
-	width: 40%;
+.aboutContent p {
+	padding-bottom: 1rem;
+	line-height: 1.5;
+}
+
+.aboutInfoDisplay {
 	display: flex;
-	flex: row wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.aboutFacts {
+	width: calc(7.95rem * 2 + .5rem);
+	height: calc(7.95rem * 2 + .5rem);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: .5rem;
 }
 
 .aboutBox {
-	margin: .5rem;
-	width: 100px;
-	/* height: auto; */
-	border: 1px solid black;
-	box-shadow: 5px 10px #888888;
+	text-transform: uppercase;
+	width: 7.95rem;
+	height: 7.95rem;
+	box-shadow: 0 0 1rem .1rem #dadada;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	letter-spacing: 1px;;
+	font-family: 'Roboto Slab', serif;
+	color: #003399;
+}
+
+
+.aboutBox span {
+	display: block;
+	padding-bottom: 1rem;
+	font-size: 2rem;
 }
 
 /* =====================
@@ -215,12 +281,32 @@ EXPERIENCE AND SKILL STYLES
 .experience {
 	background-color: #99cccc;
 	padding:4rem 0;
-	color: white;
 }
 
 .iconContainer {
 	display:flex;
 	justify-content: space-between;
+	padding: 2rem;
+}
+
+.icon {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	width: 3rem;
+	height: 3rem;
+}
+
+.icon i{
+font-size: 3rem;
+}
+
+.iconName{
+	display:none;
+}
+
+.show{
+	display:contents;
 }
 
 
@@ -228,7 +314,7 @@ EXPERIENCE AND SKILL STYLES
 PROJECT STYLES
 ===================== */
 .portfolio {
-	background-color: #cccccc;
+	background-color: #f1f1f1;
 }
 
 .projectContainer {
@@ -263,7 +349,6 @@ CONTENT STYLES
 
 .contact {
 	background-color: #99cccc;
-	color: white;
 }
 
 
@@ -273,6 +358,7 @@ FOOTER SECTION
 footer {
 	background-color: black;
 	color: white;
+	padding:0.5rem 0;
 }
 
 
@@ -285,11 +371,25 @@ MEDIA QUERIES - Desktop first to mobile
 
 /* responsive design for small desktop screens */
 @media (max-width: 940px) {
+	/* ABOUT Section */
+	.aboutContainer {
+		flex-direction: column;
+	}
+	.aboutContent {
+		width: 100%;
+		margin: 0;
+	}
+	.aboutFacts {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 	
 }
 
 /* responsive design for tablets */
 @media (max-width: 768px) {
+	/* HEADER Section */
 	.navList{
 		display: none;
 		width: 100%;

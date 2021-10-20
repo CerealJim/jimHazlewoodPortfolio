@@ -14,5 +14,6 @@ const iconSkill = document.querySelector(".icon")
 const iconName = document.querySelector("iconName")
 
 iconSkill.addEventListener("hover", () => {
+  console.log('hover is working')
   iconName.classList.toggle("show");
 })
