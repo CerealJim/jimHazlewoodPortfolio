@@ -7,3 +7,12 @@ navHamburger.addEventListener("click", () => {
   headerNav.classList.toggle("active");
   navHamburger.classList.toggle("active");
 })
+
+
+
+const iconSkill = document.querySelector(".icon")
+const iconName = document.querySelector("iconName")
+
+iconSkill.addEventListener("hover", () => {
+  iconName.classList.toggle("show");
+})

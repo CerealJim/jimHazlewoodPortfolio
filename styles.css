@@ -316,10 +316,14 @@ MEDIA QUERIES - Desktop first to mobile
 	}
 	
 	.headerImg {
-		display: none;
+		width: 250px;
+		/* display: none; */
 	}
 	.headerText {
-		padding: 2rem 0;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-top: 2rem;
 	}
 
 	h1 {
