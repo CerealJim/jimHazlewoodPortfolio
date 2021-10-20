@@ -24,21 +24,26 @@
   <header>
     <div class="wrapper headerContent">
       <div class="NavContainer">
-        <nav>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Let's Talk</a></li>
+        <nav class="headerNav">
+          <!-- <a href="#home">JH</a> -->
+          <button class="hamburger">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="desktopNav">
+            <li><a href="#about" class="navItem">About</a></li>
+            <li><a href="#portfolio" class="navItem">Portfolio</a></li>
+            <li><a href="#contact" class="navItem">Let's Talk</a></li>
           </ul>
         </nav>
       </div>
       <div class="headerText">
-        <h1>Hello, I'm <span class="nameTextHeader">Jim Hazlewood</span></h1>
-        <h3>Web Developer</h3>
-      </div>
-      <div>
-
+        <div class="headerTitle">
+          <h1><span class="nameTextHeader">Hello, I'm </span><span class="firstName">Jim</span>Hazlewood</h1>
+          <h3>Web Developer</h3>
+        </div>
+        <div class="headerImg">
+          <img src="./assets/profilePicTransparent.png" alt="A picture of Jim Hazlewood who has brown hair, green eyes and in a dress shirt">
+        </div>
       </div>
     </div>
   </header>
@@ -76,7 +81,7 @@
       </div>
     </section>
 
-    <section class="Experience" id="Experience">
+    <section class="experience" id="experience">
       <div class="wrapper">
         <h2>Experience and Skills</h2>
         <div class="iconContainer">
@@ -126,7 +131,7 @@
         <h2>Check out </h2>
         <div class="project">
           <div class="projectImg">
-            <img src="" alt="">
+            <img src="./assets/barOneDesktop.JPG" alt="Screenshot of a bar business photoshop design converion">
           </div>
           <div class="projectInfo">
             <h3>Client PSD Conversion</h3>
@@ -148,7 +153,7 @@
           </div>
           <div class="project">
             <div class="projectImg">
-              <img src="" alt="">
+              <img src="./assets/boxOfficeDesktop.JPG" alt="Screenshot of the front page with a form where you can get movie recommendations">
             </div>
             <div class="projectInfo">
               <h3>Vanila JS</h3>
@@ -171,7 +176,7 @@
           </div>
           <div class="project">
             <div class="projectImg">
-              <img src="" alt="">
+              <img src="./assets/taskifyDesktop.JPG" alt="Screenshot of the taskify to-do app homepage">
             </div>
             <div class="projectInfo">
               <h3>Individual React App</h3>
@@ -194,7 +199,7 @@
           </div>
           <div class="project">
             <div class="projectImg">
-              <img src="" alt="">
+              <img src="./assets/boxOfficeDesktop.JPG" alt="Screenshot of the box office boffo app where users can guess the top 10 grossing movies">
             </div>
             <div class="projectInfo">
               <h3>Team React App</h3>
@@ -227,7 +232,7 @@
           </div>
           <div class="project">
             <div class="projectImg">
-              <img src="" alt="">
+              <img src="./assets/boardGameDesktop.JPG" alt="Screenshot of an app that generates board game recommendations based on 3 criteria">
             </div>
             <div class="projectInfo">
               <h3>Jquery App</h3>

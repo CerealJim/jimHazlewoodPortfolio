@@ -48,17 +48,17 @@ h1, h2, h3, h4, li {
 }
 
 h1 {
-	font-size: 2.5rem; /* font size of 35px*/
+	font-size: 4rem;
 }
 
 h2 {
 	font-weight: bold;
-	font-size: 1.75rem; /* font size of 35px*/
+	font-size: 1.75rem;
 }
 
 h3,
 h4 {
-	font-size: 1.2rem; /* font size of 24px*/
+	font-size: 1.2rem;
 }
 
 
@@ -69,6 +69,7 @@ p {
 
 img {
   max-width: 100%;
+	height: 100%
 }
 
 ul {
@@ -91,36 +92,92 @@ button {
 HEADER STYLES
 ===================== */
 header {
-	background-color: #cccccc;
-	padding: 3rem 0;
-  /* height:100vh; */
-	min-height: 50vh;
-  position:relative
+	background-color: #f1f1f1;
 }
 
 .headerContent {
 	display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2rem 0;
-  height:100%;
 }
 
-nav {
+.headerNav {
 	display: flex;
-	text-align: right;
-	justify-content: space-between;
+	justify-content: flex-end;
 }
 
-nav ul {
+.headerNav ul {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	padding: 15px 0;
+	margin-right: -1rem;
 }
 
-nav ul li {
-	flex:1 0 33.33%;
+.headerNav li {
+	padding:0 1rem;
+	text-transform: uppercase;
 }
+
+.headerNav li a,
+.headerNav li a:visited,
+.hamburger {
+	color: #003399;
+	transition: 0.8s ease;
+}
+
+.headerNav li a:hover,
+.hamburger:hover,
+.headerNav li a:focus,
+.hamburger:focus {
+	color: #FF9933;
+}
+
+h1 {
+	padding-bottom: 1.5rem;
+}
+
+h3 {
+	font-weight:normal;
+	letter-spacing: 1px;;
+}
+
+.headerText {
+	display:flex;
+	justify-content: space-between;
+}
+
+.headerTitle {
+	display:flex;
+	justify-content: center;
+	flex-direction: column;
+	
+}
+
+
+.nameTextHeader {
+	font-family: 'Ruda', sans-serif;
+	display:block;
+	font-size: 1.75rem;
+	color: #003399;
+	font-weight:normal;
+}
+.firstName {
+	display:block;
+}
+
+.headerImg {
+	width: 500px;
+	height: auto;
+}
+
+.hamburger {
+	display: none;
+	font-size: 1rem;
+	color:#003399;
+	cursor: pointer;
+}
+
 
 
 /* =====================
@@ -131,21 +188,37 @@ ABOUT STYLES
 /* =====================
 EXPERIENCE AND SKILL STYLES
 ===================== */
-
+.experience {
+	background-color: #99cccc;
+	color: white;
+}
 
 
 /* =====================
 PROJECT STYLES
 ===================== */
+.portfolio {
+	background-color: #cccccc;
+}
 
 
+/* =====================
+CONTENT STYLES
+===================== */
 
+.contact {
+	background-color: #99cccc;
+	color: white;
+}
 
 
 /* ========================================
 FOOTER SECTION
 ======================================== */
-
+footer {
+	background-color: black;
+	color: white;
+}
 
 
 
@@ -156,10 +229,30 @@ MEDIA QUERIES - Desktop first to mobile
 ======================================== */
 
 /* responsive design for small desktop screens */
-@media (max-width: 940px) {}
+@media (max-width: 940px) {
+	
+}
 
 /* responsive design for tablets */
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+	.hamburger {
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		padding:1rem 0;
+	}
+	.desktopNav{
+		display: none;
+	}
+	
+	.headerImg{
+		display:none;
+	}
+	.headerText{
+		padding:2rem 0;
+	}
+}
 
 /* responsive design for phones */
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+}
