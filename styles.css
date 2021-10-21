@@ -40,7 +40,7 @@ html {
   margin: 0 auto;
 }
 
-h1, h2, h3, h4, li {
+h1, h2, h3, h4, li, fieldset {
 	font-family: 'Roboto Slab', serif;
 	font-weight: bold;
   margin: 0;
@@ -66,8 +66,8 @@ h3,
 h4 {
 	color: #003399;
 	text-shadow: 2px 2px #cccccc;
-	display: flex;
-	justify-content: left;
+	/* display: flex;
+	justify-content: left; */
 	/* align-items: center; */
 	text-transform: uppercase;
 	font-size: 1.2rem;
@@ -77,6 +77,7 @@ h4 {
 
 h4 {
 	color: #000000;
+	text-transform:none;
 }
 
 h2::after {
@@ -98,6 +99,7 @@ p {
 	font-size: 1rem;
 	margin: 0;
 	letter-spacing: 1px;
+	line-height: 1.5;
 }
 
 img {
@@ -345,12 +347,16 @@ PROJECT STYLES
 
 .project {
 	display: flex;
-	box-shadow: 0 0 1rem .1rem #000000;
+	box-shadow: 0 0 1rem .1rem #dadada;
 	padding: 0.5rem;
 	margin-bottom: 2rem;
 	justify-content: center;
 	align-items: center;
+}
 
+.projectName {
+	display:flex;
+	justify-content: space-between;
 }
 
 .projectImg {
@@ -421,7 +427,7 @@ PROJECT STYLES
 }
 
 .devTools .iconName { 
-	visibility: hidden;
+	/* visibility: hidden; */
 	font-size: 0.9rem;
 	font-weight: normal;
 }
@@ -437,8 +443,66 @@ CONTENT STYLES
 
 .contact {
 	background-color: #99cccc;
+	padding:2rem 0;
+}
+.contactMe {
+	display: flex;
 }
 
+.contactInfo {
+	width: calc(50% - 3rem);
+	margin-right: 3rem;
+}
+.contactInfo p {
+	margin: 2rem 0;
+}
+
+.socialMedia ul {
+	display: flex;
+	color:black;
+	font-size: 2rem;
+	gap: 2rem;
+}
+
+.socialMedia a {
+	/* font-weight: bold; */
+	color: #003399;
+	transition: 0.5s ease;
+}
+
+.socialMedia a:hover,
+.socialMedia a:focus {
+	background-color: #ffffff;
+	color: #FF9933;
+}
+
+fieldset {
+	width: 50%;
+	margin-bottom:2rem;
+	border: none;
+}
+
+form button {
+	margin: 1rem 0;
+}
+
+form button:hover,
+form button:focus {
+	background-color: #000000;
+	color: #FF9933;
+}
+
+.contactFormInput {
+	display: flex;
+	flex-direction: column;
+}
+
+.contactFormBottom textarea {
+  width: 100%;
+  height: 5rem;
+  line-height: 1.5;
+  resize:none;
+}
 
 /* ========================================
 FOOTER SECTION
@@ -476,8 +540,20 @@ MEDIA QUERIES - Desktop first to mobile
 		align-items: center;
 	}
 
-		/* Project Section */
-	
+	/* Project Section */
+	.project {
+		flex-direction: column;
+	}
+	.projectImg {
+		margin-bottom: 2rem;
+	}
+	.projectInfo {
+		width: 100%;
+	}
+	.portfolioLinks,
+	.devTools {
+		flex-wrap: wrap;
+	}
 }
 
 /* responsive design for tablets */
@@ -527,6 +603,19 @@ MEDIA QUERIES - Desktop first to mobile
 		font-size: 1.25rem;
 	}
 
+	.contactMe {
+		flex-direction: column;
+	}
+	.contactInfo {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 2rem;
+	}
+	fieldset {
+		width:100%;
+	}
+
+
 }
 
 /* responsive design for phones */
@@ -534,15 +623,8 @@ MEDIA QUERIES - Desktop first to mobile
 
 	/* ABOUT Facts resizing */
 	.aboutFacts {
-		width: calc(6rem * 2 + .5rem);
-		height: calc(5.3rem * 2 + 1rem);
+		height: auto;
 		gap: .5rem;
-	}
-	
-	.aboutBox {
-		text-transform: uppercase;
-		width: 6rem;
-		height: 5.3rem;
 	}
 
 	.aboutBox span {
@@ -551,8 +633,8 @@ MEDIA QUERIES - Desktop first to mobile
 
 
 	.projectImg {
-		width: 15rem;
-		height: 8.5rem;
+		width: 13rem;
+		height: 7.1rem;
 	}
 
 }
