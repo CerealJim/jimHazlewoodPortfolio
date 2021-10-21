@@ -14,6 +14,7 @@ app.init = () => {
 app.hamburgerClick = () => {
   app.navHamburger.addEventListener("click", () => {
     app.navList.classList.toggle("active");
+    app.navHamburger.classList.toggle("active");
   })
 }
 

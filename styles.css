@@ -66,10 +66,11 @@ h3,
 h4 {
 	color: #003399;
 	text-shadow: 2px 2px #cccccc;
-	text-transform: uppercase;
-	font-size: 1.2rem;
+	/* text-transform: uppercase; */
+	font-size: 1.5rem;
 	letter-spacing: 1px;
 	font-weight: normal;
+	padding-bottom: .5rem;
 }
 
 h4 {
@@ -256,6 +257,25 @@ ABOUT STYLES
 .aboutContent {
 	width: calc(100% - 2rem - (9rem * 2 + 1rem));
 	margin-right: 2rem;
+	padding-bottom: 2rem;
+}
+
+.aboutContent a {
+	background-color: #e4e4e4;
+	/* border: 1px solid #000000; */
+	/* box-shadow: 0 0 1rem .1rem #dadada; */
+	padding: .5rem 1rem;
+	margin: .5rem 0;
+	border-radius: 8px;
+	color: #003399;
+	font-weight: bold;
+}
+
+
+.aboutContent a:hover,
+.aboutContent a:focus {
+	background-color: #000000;
+	color: #FF9933;
 }
 
 .aboutContent p {
@@ -284,7 +304,7 @@ ABOUT STYLES
 	width: 9rem;
 	height: 7.95rem;
 	box-shadow: 0 0 1rem .1rem #dadada;
-	border-radius: 5px;
+	border-radius: 8px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -352,16 +372,28 @@ PROJECT STYLES
 
 .projectContainer {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+
+.projectContent {
+	width: 100%;
 }
 
 .project {
 	display: flex;
-	box-shadow: 0 0 1rem .1rem #dadada;
-	padding: 0.5rem;
+	flex-direction: column;
+	width: calc(50% - 1rem);
+	box-shadow: 0 0 1rem .1rem #b4b4b4;
+	transition: .5s;
+	/* padding: 0.5rem; */
 	margin-bottom: 2rem;
-	justify-content: center;
-	align-items: center;
+	justify-content: space-between;
+	/* align-items: center; */
+	flex-wrap: wrap;
+	border-radius: 5px;
+	/* border: .25rem solid #99cccc; */
 }
 
 .projectName {
@@ -370,24 +402,21 @@ PROJECT STYLES
 }
 
 .projectImg {
-	width: 20rem;
-	height: 11.25rem;
 	display:flex;
+	border-radius: 8px 8px 0 0;
 }
 
 .projectImg img {
 	width: 100%;
 	height: 100%;
+	border-radius: 8px 8px 0 0;
 }
 
 .projectInfo {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: calc(100% - 20rem);
-	height: 100%;
-	padding: 0 .5rem;
-	min-height: 11.25rem;
+	padding: 1rem;
 }
 
 .projectInfo p {
@@ -397,18 +426,33 @@ PROJECT STYLES
 
 .portfolioLinks {
 	display:flex;
-	justify-content: left;
+	width: 100%;
+	justify-content: space-around;
 	align-items: center;
-	text-transform: uppercase;
-	margin: .5rem 0;
-	gap: 1rem;
 }
 
-.projectInfo a,
-.portfolioLinks a {
+.projectInfo a {
 	font-weight: bold;
 	color: #003399;
 	transition: 0.5s ease;
+}
+.portfolioLinks a {
+	width: 100%;
+	font-size: 1rem;
+	padding: 1rem 0;
+	font-weight: bold;
+	color: #003399;
+	transition: 0.5s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* box-shadow: 0 0 1rem .1rem #dadada; */
+	border-top: 1px solid #dadada;
+	border-radius: 0 0 8px 8px;
+}
+
+.portfolioLinks a:first-of-type {
+	border-right:1px solid #dadada;
 }
 
 .portfolioLinks a:hover,
@@ -420,11 +464,11 @@ PROJECT STYLES
 }
 
 .devTools {
-	color:#003399;
+	/* color:#003399; */
 	display: flex;
 	flex-direction: row;
-	align-content: flex-start;
-	padding:.25rem 0;
+	justify-content: space-around;
+	padding:1rem 1rem 0;
 	gap: 1rem;
 }
 
@@ -437,13 +481,8 @@ PROJECT STYLES
 }
 
 .devTools .iconName { 
-	/* visibility: hidden; */
 	font-size: 0.9rem;
 	font-weight: normal;
-}
-
-.devTools .iconName:active { 
-	visibility: visible;
 }
 
 
@@ -470,7 +509,7 @@ CONTENT STYLES
 .socialMedia ul {
 	display: flex;
 	color:black;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	gap: 2rem;
 }
 
@@ -482,8 +521,7 @@ CONTENT STYLES
 
 .socialMedia a:hover,
 .socialMedia a:focus {
-	background-color: #ffffff;
-	color: #FF9933;
+	font-size: 2rem;
 }
 
 fieldset {
@@ -494,6 +532,10 @@ fieldset {
 
 form button {
 	margin: 1rem 0;
+	border-radius: 8px;
+	padding: .5rem 1rem;
+	font-weight: bold;
+	cursor: pointer;
 }
 
 form button:hover,
@@ -505,6 +547,23 @@ form button:focus {
 .contactFormInput {
 	display: flex;
 	flex-direction: column;
+	padding: .5rem 0;
+}
+
+label {
+	margin-bottom: .4rem;
+}
+
+input {
+	border:none;
+	border-radius: 8px;
+	height: 1.75rem;
+	line-height: 1.5;
+	padding: .25rem;
+}
+
+.text-area {
+	margin-top: .4rem;
 }
 
 .contactFormBottom textarea {
@@ -512,6 +571,9 @@ form button:focus {
   height: 5rem;
   line-height: 1.5;
   resize:none;
+	border:none;
+	border-radius: 8px;
+	padding: .25rem;
 }
 
 /* ========================================
@@ -550,20 +612,10 @@ MEDIA QUERIES - Desktop first to mobile
 		align-items: center;
 	}
 
-	/* Project Section */
-	.project {
-		flex-direction: column;
-	}
-	.projectImg {
-		margin-bottom: 2rem;
-	}
-	.projectInfo {
-		width: 100%;
-	}
-	.portfolioLinks,
-	.devTools {
-		flex-wrap: wrap;
-	}
+	
+
+
+
 }
 
 /* responsive design for tablets */
@@ -583,10 +635,6 @@ MEDIA QUERIES - Desktop first to mobile
 		background-color: rgba(0, 0, 0, 0.5);
 	}
 
-	.hamburger.active {
-		/* background-color: rgba(0, 0, 0, 0.5); */
-	}
-	
 	.hamburger {
 		display: flex;
 		justify-content: center;
@@ -611,6 +659,23 @@ MEDIA QUERIES - Desktop first to mobile
 
 	.helloText {
 		font-size: 1.25rem;
+	}
+
+
+	/* Project Section */
+	.project {
+		flex-direction: column;
+		width: 100%;
+	}
+	.projectImg {
+		margin-bottom: 2rem;
+	}
+	.projectInfo {
+		width: 100%;
+	}
+
+	.devTools {
+		flex-wrap: wrap;
 	}
 
 	.contactMe {
@@ -640,11 +705,4 @@ MEDIA QUERIES - Desktop first to mobile
 	.aboutBox span {
 		font-size: 1.5rem;
 	}
-
-
-	.projectImg {
-		width: 13rem;
-		height: 7.1rem;
-	}
-
 }
