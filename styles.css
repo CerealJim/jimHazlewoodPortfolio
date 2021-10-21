@@ -67,7 +67,7 @@ h2::after {
 	background-color: #FF9933;
 	position:absolute;
 	left:-.25rem;
-	top: .5rem;
+	top: 1rem;
 	z-index: -1;
 	width:120%;
 	height:50%;
@@ -77,6 +77,10 @@ h2::after {
 
 h3,
 h4 {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	text-transform: uppercase;
 	font-size: 1.2rem;
 }
 
@@ -228,7 +232,7 @@ ABOUT STYLES
 }
 
 .aboutContent {
-	width: calc(100% - 2rem - (7.95rem * 2 + .5rem));
+	width: calc(100% - 2rem - (9rem * 2 + 1rem));
 	margin-right: 2rem;
 }
 
@@ -244,18 +248,18 @@ ABOUT STYLES
 }
 
 .aboutFacts {
-	width: calc(7.95rem * 2 + .5rem);
-	height: calc(7.95rem * 2 + .5rem);
+	width: calc(9rem * 2 + 1rem);
+	height: calc(7.95rem * 2 + 1rem);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	gap: .5rem;
+	gap: 1rem;
 }
 
 .aboutBox {
 	text-transform: uppercase;
-	width: 7.95rem;
+	width: 9rem;
 	height: 7.95rem;
 	box-shadow: 0 0 1rem .1rem #dadada;
 	border-radius: 5px;
@@ -285,28 +289,29 @@ EXPERIENCE AND SKILL STYLES
 
 .iconContainer {
 	display:flex;
-	justify-content: space-between;
-	padding: 2rem;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	gap: 2rem 0;
+	padding: 2rem 0;
 }
 
 .icon {
+	width: 10rem;
 	display:flex;
 	justify-content: center;
 	align-items: center;
-	width: 3rem;
-	height: 3rem;
 }
 
 .icon i{
-font-size: 3rem;
+	font-size: 3.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: .5rem;
 }
 
 .iconName{
-	display:none;
-}
-
-.show{
-	display:contents;
+	text-align: center;
 }
 
 
@@ -315,6 +320,12 @@ PROJECT STYLES
 ===================== */
 .portfolio {
 	background-color: #f1f1f1;
+	padding:4rem 0;
+}
+
+.portfolio h2 {
+	margin-bottom: 3rem;
+	font-weight: bold;
 }
 
 .projectContainer {
@@ -324,23 +335,50 @@ PROJECT STYLES
 
 .project {
 	display: flex;
+	box-shadow: 0 0 1rem .1rem #000000;
+	margin-bottom: 2rem;
 }
 
 .projectImg {
-	width: 8rem;
-	height: 4.5rem;
-	/* height: auto; */
+	width: 25rem;
+	height: 14.1rem;
+}
+
+.projectImg img {
+	width: 100%;
 }
 
 .projectInfo {
 	display: flex;
 	flex-direction: column;
+	padding: 1rem;
+}
+
+.projectInfo h3,
+.projectInfo h4 {
+	font-weight: normal;
+}
+
+.portfolioLinks {
+	display:flex;
+	text-transform: uppercase;
 }
 
 .devTools {
 	display: flex;
 	flex-direction: row;
 }
+
+.iconName {
+	padding: 1rem;
+}
+
+/* .iconName i {
+	font-size: 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+} */
 
 
 /* =====================
@@ -360,6 +398,8 @@ footer {
 	color: white;
 	padding:0.5rem 0;
 }
+
+
 
 
 
@@ -438,4 +478,28 @@ MEDIA QUERIES - Desktop first to mobile
 
 /* responsive design for phones */
 @media (max-width: 480px) {
+
+	/* ABOUT Facts resizing */
+	.aboutFacts {
+		width: calc(6rem * 2 + .5rem);
+		height: calc(5.3rem * 2 + 1rem);
+		gap: .5rem;
+	}
+	
+	.aboutBox {
+		text-transform: uppercase;
+		width: 6rem;
+		height: 5.3rem;
+	}
+
+	.aboutBox span {
+		font-size: 1.5rem;
+	}
+
+
+	.projectImg {
+		width: 15rem;
+		height: 8.5rem;
+	}
+
 }
