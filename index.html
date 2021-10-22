@@ -317,26 +317,26 @@
             </nav>
           </div>
           <fieldset data-aos="fade-up">
-            <form action="#" method="#" class="contactForm" name="contactForm">
+            <form action="https://formsubmit.co/jim_hazlewood4@hotmail.com" method="POST" class="contactForm" name="contactForm">
               <div class="contactFormTop">
                 <div class="name contactFormInput">
                   <label for="name">Name</label>
-                  <input type="text" id="name" name="name" minlength="2">
+                  <input type="text" id="name" name="name" required>
                 </div>
                 <div class="email contactFormInput">
                   <label for="email">Email address</label>
-                  <input type="email" id="email" name="email">
+                  <input type="email" id="email" name="email" required>
                 </div>
               </div>
               <div class="contactFormBottom">
                 <label for="comment" class="srOnly">Message</label>
                 <div class="text-area">
-                  <textarea type="text" id="comment" placeholder="Let's get in touch!" minlength="5"></textarea>
+                  <!-- <textarea type="text" id="comment" placeholder="Let's get in touch!" required></textarea> -->
+                  <input type="text" class="message" name="message" id="comment" placeholder="Let's get in touch!" maxlength="100" required></input>
                 </div>
               </div>
-              <button type="submit">Submit</button>
-              <p class="submitParagraph"></p>
-              </form]>
+              <button type="submit">Send</button>
+              </form>
           </fieldset>
         </div>
       </div>
