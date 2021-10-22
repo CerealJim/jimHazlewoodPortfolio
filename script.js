@@ -7,9 +7,6 @@ const app = {};
 app.navHamburger = document.querySelector(".hamburger")
 app.navList = document.querySelector(".navList")
 app.navLink = document.querySelectorAll(".navLink")
-// Form properties
-// app.formElement = document.querySelector('form');
-// app.formResponse = document.querySelector(".submitParagraph");
 
 app.contactMessages = [];
 
@@ -32,15 +29,6 @@ app.linkClick = () => {
     });
   }
 )}
-
-// Form submit click
-// app.submission = () => {
-//   app.formElement.addEventListener("submit", (e) => {
-//     e.preventDefault();
-//     app.formElement.reset();
-//     app.formResponse.textContent = `✔ Thank you!`;
-//   })
-// }
 
 // call app.init
 app.init();
