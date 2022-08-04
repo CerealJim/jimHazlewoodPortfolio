@@ -252,6 +252,7 @@ ABOUT STYLES
 .aboutContent a:focus {
 	background-color: #000000;
 	color: #FF9933;
+	border: 1px solid #00Ff00;
 }
 
 .aboutContent p {
@@ -432,6 +433,7 @@ PROJECT STYLES
 .projectInfo a:focus {
 	background-color: #000000;
 	color: #FF9933;
+	border: 1px solid #00Ff00;
 }
 
 .devTools {
@@ -469,11 +471,15 @@ CONTENT STYLES
 }
 
 .contactInfo {
-	width: calc(50% - 3rem);
-	margin-right: 3rem;
+	display:flex;
+	justify-content: space-between;
+	/* width: calc(50% - 3rem); */
+	/* margin-right: 3rem; */
 }
 .contactInfo p {
 	margin: 2rem 0;
+	width: calc(50% - 3rem);
+	margin-right: 3rem;
 }
 
 .socialMedia ul {
@@ -481,16 +487,18 @@ CONTENT STYLES
 	color:black;
 	font-size: 1.5rem;
 	gap: 2rem;
+	margin: 2rem 0;
 }
 
 .socialMedia a {
 	color: #003399;
 	transition: 0.5s ease;
+	font-size: 2rem;
 }
 
 .socialMedia a:hover,
 .socialMedia a:focus {
-	font-size: 2rem;
+	font-size: 2.5rem;
 }
 
 fieldset {
@@ -653,10 +661,30 @@ MEDIA QUERIES - Desktop first to mobile
 		flex-direction: column;
 	}
 	.contactInfo {
+		flex-direction: column;
 		width: 100%;
 		margin-right: 0;
 		margin-bottom: 2rem;
 	}
+	.contactInfo p {
+    /* margin: 2rem 0; */
+    width: 100%;
+    /* margin-right: 3rem; */
+}
+.socialMedia ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 10% auto;
+	/* color: black; */
+	/* font-size: 1.5rem; */
+	/* gap: 2rem; */
+	/* margin: 2rem 0; */
+}
+.socialMedia a:hover,
+.socialMedia a:focus {
+	font-size: 2rem;
+}
 	fieldset {
 		width:100%;
 	}
