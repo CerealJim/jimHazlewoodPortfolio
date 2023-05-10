@@ -314,7 +314,7 @@ button,
 p {
   font-size: 1rem;
   margin: 0;
-  letter-spacing: 1px;
+  letter-spacing: 0.1px;
   line-height: 1.5;
 }
 
@@ -391,8 +391,10 @@ header {
 
 .navLink:hover,
 .navLInk:focus {
-  color: #ff9933;
+  /* color: #ff9933; */
   background-color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 .hamburger:hover {
   color: #ff9933;
@@ -465,9 +467,20 @@ ABOUT STYLES
 
 .aboutContent a:hover,
 .aboutContent a:focus {
-  background-color: #000000;
-  color: #ff9933;
-  border: 1px solid #00ff00;
+  background-color: #d5d5d5;
+  /* color: #ff9933; */
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  /* border: 1px solid #00ff00; */
+}
+
+.aboutContent p a.aboutContentLinks {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 8px;
+  color: #003399;
+  font-weight: bold;
 }
 
 .aboutContent p {
@@ -633,8 +646,8 @@ PROJECT STYLES
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid #dadada;
-  border-radius: 0 0 8px 8px;
+  border-top: 1px solid #000;
+  /* border-radius: 0 0 8px 8px; */
 }
 
 .portfolioLinks a:first-of-type {
@@ -645,9 +658,9 @@ PROJECT STYLES
 .portfolioLinks a:focus,
 .projectInfo a:hover,
 .projectInfo a:focus {
-  background-color: #000000;
-  color: #ff9933;
-  border: 1px solid #00ff00;
+  background-color: #d3d3d3;
+  /* color: #ff9933; */
+  /* border: 1px solid #00ff00; */
 }
 
 .devTools {
@@ -685,13 +698,14 @@ CONTENT STYLES
 
 .contactInfo {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   /* width: calc(50% - 3rem); */
   /* margin-right: 3rem; */
+  flex-direction: column;
 }
 .contactInfo p {
   margin: 2rem 0;
-  width: calc(50% - 3rem);
+  /* width: calc(50% - 3rem); */
   margin-right: 3rem;
 }
 
@@ -715,7 +729,7 @@ CONTENT STYLES
 }
 
 fieldset {
-  width: 50%;
+  width: 100%;
   margin-bottom: 2rem;
   border: none;
 }
@@ -730,8 +744,7 @@ form button {
 
 form button:hover,
 form button:focus {
-  background-color: #000000;
-  color: #ff9933;
+  background-color: #d5d5d5;
 }
 
 .contactFormInput {
