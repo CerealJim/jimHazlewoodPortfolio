@@ -1,0 +1,126 @@
+/* =====================
+PROJECT STYLES
+===================== */
+.portfolio {
+  background-color: #f1f1f1;
+  padding: 4rem 0;
+}
+
+.portfolio h2 {
+  margin-bottom: 3rem;
+  font-weight: bold;
+}
+
+.projectContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.projectContent {
+  width: 100%;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 1rem);
+  box-shadow: 0 0 1rem 0.1rem #b4b4b4;
+  transition: 0.5s;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-radius: 5px;
+}
+
+.projectName {
+  display: flex;
+  justify-content: space-between;
+}
+
+.projectImg {
+  display: flex;
+  border-radius: 8px 8px 0 0;
+}
+
+.projectImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.projectInfo p {
+  line-height: 1.5;
+  margin: 0.5rem 0;
+}
+
+.portfolioLinks {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.projectInfo a {
+  font-weight: bold;
+  color: #003399;
+  transition: 0.5s ease;
+}
+.portfolioLinks a {
+  width: 100%;
+  font-size: 1rem;
+  padding: 1rem 0;
+  font-weight: bold;
+  color: #003399;
+  transition: 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #000;
+  /* border-radius: 0 0 8px 8px; */
+}
+
+.portfolioLinks a:first-of-type {
+  border-right: 1px solid #dadada;
+}
+
+.portfolioLinks a:hover,
+.portfolioLinks a:focus,
+.projectInfo a:hover,
+.projectInfo a:focus {
+  background-color: #d3d3d3;
+}
+.projectInfo p a:hover,
+.projectInfo p a:focus {
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.devTools {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem 1rem 0;
+  gap: 1rem;
+}
+
+.devTools li {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.devTools .iconName {
+  font-size: 0.9rem;
+  font-weight: normal;
+}
