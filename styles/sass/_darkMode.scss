@@ -59,6 +59,17 @@ body.dark-mode {
     a:hover {
       background-color: $dark-teal;
     }
+    .project {
+      &.discontinued {
+        &::before {
+          background-color: rgba($black, 0.75);
+        }
+        &::after {
+          color: $white;
+          background-color: $black;
+        }
+      }
+    }
   }
 
   //Contact Section

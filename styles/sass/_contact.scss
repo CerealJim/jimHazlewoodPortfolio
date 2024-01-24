@@ -126,6 +126,9 @@ input {
 }
 textarea {
   border-radius: 8px;
+  line-height: 1.5;
+  resize: none;
+  resize: vertical;
 }
 
 .message {
