@@ -1,4 +1,7 @@
 /* =====================
+COLOR TYPOGRAPHY 
+===================== */
+/* =====================
 NORMALIZE SETUP
 ===================== */
 html {
@@ -273,20 +276,6 @@ html {
 }
 
 /* =====================
-GOOGLE FONT TYPOGRAPHY 
-===================== */
-/* font-family: 'Roboto Slab', serif; */
-/* font-family: 'Ruda', sans-serif; */
-/* color: #FF9933; orange*/
-/* color: #003399; blue*/
-/* color: #99cccc; teal*/
-/* color: #cccccc; light grey*/
-/* color: #ffffff; white*/
-/* color: #000000; black*/
-/* =====================
-COLOR TYPOGRAPHY 
-===================== */
-/* =====================
 GENERAL STYLES
 ===================== */
 html {
@@ -314,8 +303,9 @@ fieldset {
 }
 
 h1 {
-  font-size: 4rem;
-  text-shadow: 3px 3px #cccccc;
+  font-weight: 800;
+  font-size: 24px;
+  letter-spacing: 0.8px;
 }
 
 h2 {
@@ -462,14 +452,8 @@ header {
 
 .navLink:hover,
 .navLInk:focus {
-  /* color: #ff9933; */
-  /* background-color: #ffffff; */
   text-decoration: underline;
   text-underline-offset: 4px;
-}
-
-.hamburger:hover {
-  /* color: #ff9933; */
 }
 
 h1 {
@@ -1299,6 +1283,10 @@ input {
   padding: 0.25rem;
 }
 
+textarea {
+  border-radius: 8px;
+}
+
 .message {
   margin-top: 0.4rem;
   width: 100%;
@@ -1412,7 +1400,7 @@ MEDIA QUERIES - Desktop first to mobile
     z-index: 20;
   }
   .hamburger.active {
-    color: white;
+    color: #ffffff;
   }
   /* .headerImg {
     width: 250px;
@@ -1530,4 +1518,92 @@ MEDIA QUERIES - Desktop first to mobile
   .icon i {
     font-size: 1.75rem;
   }
+}
+body.dark-mode header {
+  background-color: #2c3e50;
+}
+body.dark-mode .navLink,
+body.dark-mode .hamburger {
+  color: #ffffff;
+}
+body.dark-mode .helloText {
+  color: #5eff94;
+}
+body.dark-mode .introText {
+  color: #d3d3d3;
+}
+body.dark-mode .experience {
+  background-color: #004c4c;
+}
+body.dark-mode .experience h2 {
+  color: #5eff94;
+  text-shadow: 2px 2px #2c3e50;
+}
+body.dark-mode .experience h2::after {
+  background-color: #2c3e50;
+}
+body.dark-mode .icon p {
+  color: #d3d3d3;
+}
+body.dark-mode .portfolio {
+  background-color: #2c3e50;
+}
+body.dark-mode .portfolio .project {
+  -webkit-box-shadow: 0 0 1rem 0.1rem rgba(94, 255, 148, 0.5);
+          box-shadow: 0 0 1rem 0.1rem rgba(94, 255, 148, 0.5);
+}
+body.dark-mode .portfolio h2 {
+  color: #5eff94;
+  text-shadow: 2px 2px #004c4c;
+}
+body.dark-mode .portfolio h2::after {
+  background-color: #004c4c;
+}
+body.dark-mode .portfolio h3 {
+  color: #d3d3d3;
+  text-shadow: 2px 2px #004c4c;
+}
+body.dark-mode .portfolio p,
+body.dark-mode .portfolio a,
+body.dark-mode .portfolio li,
+body.dark-mode .portfolio a {
+  color: #d3d3d3;
+}
+body.dark-mode .portfolio a:hover {
+  background-color: #004c4c;
+}
+body.dark-mode .contact {
+  background-color: #004c4c;
+}
+body.dark-mode .contact p,
+body.dark-mode .contact a,
+body.dark-mode .contact li,
+body.dark-mode .contact a {
+  color: #d3d3d3;
+}
+body.dark-mode .contact h2 {
+  color: #5eff94;
+  text-shadow: 2px 2px #2c3e50;
+}
+body.dark-mode .contact h2::after {
+  background-color: #2c3e50;
+}
+body.dark-mode .contact form label {
+  color: #d3d3d3;
+}
+body.dark-mode .contact form input,
+body.dark-mode .contact form textarea {
+  background-color: #2c3e50;
+  color: #d3d3d3;
+  border: 1px solid #d3d3d3;
+}
+body.dark-mode .contact form input:hover,
+body.dark-mode .contact form textarea:hover {
+  border: 1px solid #5eff94;
+}
+body.dark-mode .contact button {
+  background: #d3d3d3;
+}
+body.dark-mode .contact button::before {
+  background: #d3d3d3;
 }

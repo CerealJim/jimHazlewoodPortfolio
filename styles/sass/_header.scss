@@ -3,9 +3,6 @@ HEADER STYLES
 ===================== */
 header {
   background-color: $light-background;
-  @at-root body.dark-mode & {
-    background-color: $slate-grey;
-  }
 }
 
 .headerNav {
@@ -55,13 +52,8 @@ header {
 
 .navLink:hover,
 .navLInk:focus {
-  /* color: #ff9933; */
-  /* background-color: #ffffff; */
   text-decoration: underline;
   text-underline-offset: 4px;
-}
-.hamburger:hover {
-  /* color: #ff9933; */
 }
 
 h1 {

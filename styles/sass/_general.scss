@@ -26,8 +26,11 @@ fieldset {
 }
 
 h1 {
-  font-size: 4rem;
-  text-shadow: 3px 3px $light-grey;
+  // font-size: 4rem;
+  // text-shadow: 3px 3px $light-grey;
+  font-weight: 800;
+  font-size: 24px;
+  letter-spacing: 0.8px;
 }
 
 h2 {
@@ -42,7 +45,7 @@ h2 {
 
 h3,
 h4 {
-  color: $blue;
+  color: #003399;
   text-shadow: 2px 2px $light-grey;
   font-size: 1.5rem;
   letter-spacing: 1px;

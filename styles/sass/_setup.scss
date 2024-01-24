@@ -66,8 +66,8 @@ dfn {
   font-style: italic;
 }
 mark {
-  background-color: $yellow;
-  color: $black;
+  background-color: #ff0;
+  color: #000;
 }
 small {
   font-size: 80%;
@@ -225,49 +225,3 @@ html {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-/* =====================
-GOOGLE FONT TYPOGRAPHY 
-===================== */
-
-/* font-family: 'Roboto Slab', serif; */
-/* font-family: 'Ruda', sans-serif; */
-
-/* color: #FF9933; orange*/
-/* color: #003399; blue*/
-/* color: #99cccc; teal*/
-/* color: #cccccc; light grey*/
-/* color: #ffffff; white*/
-/* color: $black000; black*/
-
-/* =====================
-COLOR TYPOGRAPHY 
-===================== */
-
-$base-color: #c6538c;
-$border-dark: rgba($base-color, 0.88);
-
-$yellow: $yellow; //light
-$black: #000000;
-$light-grey: #cccccc; //light grey
-$blue: #003399; //blue
-$orange: #ff9933; //orange
-$light-background: #f1f1f1; // light background
-$light-e4: #e4e4e4; //light
-$light-d5: #d5d5d5; //hover
-$light-da: #dadada; //box shadow
-$teal-background: #99cccc; //Teal
-$light-b4: #b4b4b4; //light
-$light-d3: #d3d3d3;
-$white: #ffffff; // full white
-
-//dark mode
-$slate-grey: #2c3e50;
-$mint-green: #5eff94;
-$moon-purple: #6b7abb;
-$moon-purple2: #5d6baa;
-$light-e8: #e8e8ea;
-$sun-yellow: #f5eb71;
-$sun-yellow2: #fffaa8;
-$sun-blue: #96dcee;
-$sun-blue2: #72cce3;

@@ -122,6 +122,9 @@ input {
   line-height: 1.5;
   padding: 0.25rem;
 }
+textarea {
+  border-radius: 8px;
+}
 
 .message {
   margin-top: 0.4rem;

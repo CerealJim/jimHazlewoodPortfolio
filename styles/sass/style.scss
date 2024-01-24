@@ -1,17 +1,21 @@
-@use "setup";
+@import "colors";
 
-@use "general";
+@import "setup";
 
-@use "header";
+@import "general";
 
-@use "about";
+@import "header";
 
-@use "skills";
+@import "about";
 
-@use "projects";
+@import "skills";
 
-@use "contact";
+@import "projects";
 
-@use "footer";
+@import "contact";
 
-@use "mediaQueries";
+@import "footer";
+
+@import "mediaQueries";
+
+@import "darkMode";
