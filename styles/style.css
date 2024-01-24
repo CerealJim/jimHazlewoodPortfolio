@@ -1184,11 +1184,13 @@ PROJECT STYLES
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   font-size: 2rem;
+  display: block;
 }
 
 .socialMedia a:hover,
 .socialMedia a:focus {
-  font-size: 2.5rem;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 fieldset {
@@ -1580,6 +1582,9 @@ body.dark-mode .contact a,
 body.dark-mode .contact li,
 body.dark-mode .contact a {
   color: #d3d3d3;
+}
+body.dark-mode .contact a i {
+  color: #ffffff;
 }
 body.dark-mode .contact h2 {
   color: #5eff94;

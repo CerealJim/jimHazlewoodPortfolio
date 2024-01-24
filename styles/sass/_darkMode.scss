@@ -70,6 +70,9 @@ body.dark-mode {
     a {
       color: $light-d3;
     }
+    a i {
+      color: $white;
+    }
     h2 {
       color: $mint-green;
       text-shadow: 2px 2px $slate-grey;
