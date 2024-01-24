@@ -18,8 +18,8 @@
   <!-- scroll annimation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- styleSheet -->
-  <link rel="stylesheet" href="./styles.css">
-  <title>Jim Hazlewood</title>
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>JH Portfolio</title>
 </head>
 
 <body>
@@ -40,9 +40,17 @@
           <li><a href="#contact" class="navLink">Let's Talk</a></li>
         </ul>
       </nav>
+      
       <div class="introContainer">
+        <div class="modeToggleCheck">
+          <input type="checkbox" id="toggle" class="toggleCheckbox" />
+          <label for="toggle" class="toggleLabel">
+              <span class="toggleLabelBackground"></span>
+          </label>
+          
+        </div>
         <div class="introText">
-          <p><span class="helloText">Hi! I’m Jim.</span></p>
+          <h1><span class="helloText">Hi! I’m Jim.</span></h1>
           <div></div>
           <p>I'm a passionate Web Developer from Toronto with a strong foundation in creating innovative, accessible, and responsive applications.</p>
             
@@ -52,10 +60,10 @@
             
           <p>Feel free to take a look at my projects, connect with me on Linkedin, or send me a message to learn more.</p>
 
-          <a class="resumeButton" href="./assets/jimHazlewoodResume.pdf" target="_blank">
+          <!-- <a class="resumeButton" href="./assets/jimHazlewoodResume.pdf" target="_blank">
             <span>My Resume</span>
             <i class="far fa-arrow-alt-circle-down"></i>
-          </a>
+          </a> -->
           
         </div>
         <div class="introAssets">
@@ -206,7 +214,7 @@
           </div>
 
 
-          <div class="project" data-aos="fade-up">
+          <!-- <div class="project" data-aos="fade-up">
             <div class="projectContent">
               <div class="projectImg">
                 <img src="./assets/barOneDesktop.JPG" alt="Screenshot of a bar business photoshop design converion">
@@ -233,7 +241,7 @@
               <a href="https://cerealjim.github.io/jimHazlewoodProjectOne/index.html" target="_blank">Live Site</a>
               <a href="https://github.com/CerealJim/jimHazlewoodProjectOne" target="_blank">GitHub Code</a>
             </div>
-          </div>
+          </div> -->
           <div class="project" data-aos="fade-up">
             <div class="projectContent">
               <div class="projectImg">
@@ -333,7 +341,7 @@
               <a href="https://github.com/BoxOfficeBoffo/BoxOfficeBoffo" target="_blank">GitHub Code</a>
             </div>
           </div>
-          <div class="project" data-aos="fade-up">
+          <!-- <div class="project" data-aos="fade-up">
             <div class="projectImg">
               <img src="./assets/boardGameDesktop.JPG"
                 alt="Screenshot of an app that generates board game recommendations based on 3 criteria">
@@ -363,11 +371,13 @@
               <a href="https://boardgamepicker.netlify.app/" target="_blank">Live Site</a>
               <a href="https://github.com/CerealJim/BoardGamePicker-JS-API" target="_blank">GitHub Code</a>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
       </div>
     </section>
+
+
 
     <section class="contact" id="contact">
       <div class="wrapper">
@@ -379,7 +389,7 @@
               <ul>
                 <li><a href="https://www.linkedin.com/in/jim-h-1000/" target="_blank"><i class="devicon-linkedin-plain colored"></i></a>
                 </li>
-                <li><a href="https://twitter.com/Haz34Jim" target="_blank"><i class="devicon-twitter-original colored"></i></a></li>
+                <!-- <li><a href="https://twitter.com/Haz34Jim" target="_blank"><i class="devicon-twitter-original colored"></i></a></li> -->
                 <li><a href="https://github.com/CerealJim" target="_blank"><i class="devicon-github-original colored"></i></a></li>
               </ul>
             </nav>
@@ -400,7 +410,7 @@
                 <label for="comment" class="srOnly">Message</label>
                 <div class="text-area">
 
-                  <input type="text" class="message" name="message" id="comment" placeholder="Let's get in touch!" required></input>
+                  <textarea type="text" class="message" name="message" id="comment"  required></textarea>
                 </div>
               </div>
               <button type="submit">Send</button>

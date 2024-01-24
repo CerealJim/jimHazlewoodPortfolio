@@ -1,0 +1,106 @@
+//header
+
+body.dark-mode {
+  // Header/ABOUT SECTION
+  header {
+    background-color: $slate-grey;
+  }
+  .navLink,
+  .hamburger {
+    color: $white;
+  }
+  .helloText {
+    color: $mint-green;
+  }
+  .introText {
+    color: $light-d3;
+    // color: $mint-green;
+  }
+
+  // SKILLS SECTION
+  .experience {
+    background-color: $dark-teal;
+    h2 {
+      color: $mint-green;
+      text-shadow: 2px 2px $slate-grey;
+      &::after {
+        background-color: $slate-grey;
+      }
+    }
+  }
+
+  .icon p {
+    color: $light-d3;
+  }
+
+  //PORTFOLIO SECTION
+  .portfolio {
+    background-color: $slate-grey;
+    .project {
+      box-shadow: 0 0 1rem 0.1rem $mint-green-50;
+    }
+    h2 {
+      color: $mint-green;
+      text-shadow: 2px 2px $dark-teal;
+      &::after {
+        background-color: $dark-teal;
+      }
+    }
+    h3 {
+      color: $light-d3;
+      text-shadow: 2px 2px $dark-teal;
+    }
+    p,
+    a,
+    li,
+    a {
+      color: $light-d3;
+    }
+    a:hover {
+      background-color: $dark-teal;
+    }
+  }
+
+  //Contact Section
+  .contact {
+    background-color: $dark-teal;
+    p,
+    a,
+    li,
+    a {
+      color: $light-d3;
+    }
+    a i {
+      color: $white;
+    }
+    h2 {
+      color: $mint-green;
+      text-shadow: 2px 2px $slate-grey;
+      &::after {
+        background-color: $slate-grey;
+      }
+    }
+    form {
+      label {
+        color: $light-d3;
+      }
+      input,
+      textarea {
+        background-color: $slate-grey;
+        color: $light-d3;
+        border: 1px solid $light-d3;
+        &:hover {
+          border: 1px solid $mint-green;
+        }
+      }
+    }
+    button {
+      background: $light-d3;
+      &::before {
+        background: $light-d3;
+      }
+      &:hover {
+      }
+    }
+  }
+}
