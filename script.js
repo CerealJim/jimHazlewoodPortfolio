@@ -12,6 +12,7 @@ app.contactMessages = [];
 app.init = () => {
   app.hamburgerClick();
   app.linkClick();
+  app.toggleMode();
 };
 
 // Navigation hamburger cick
@@ -28,6 +29,23 @@ app.linkClick = () => {
       app.navList.classList.toggle("active");
       app.navHamburger.classList.toggle("active");
     });
+  });
+};
+app.toggleMode = () => {
+  const modeCheckbox = document.getElementById("toggle");
+  const bodyElement = document.querySelector("body");
+
+  if (modeCheckbox.checked) {
+    bodyElement.classList.add("dark-mode");
+  }
+
+  modeCheckbox.addEventListener("click", () => {
+    console.log();
+    if (modeCheckbox.checked) {
+      bodyElement.classList.add("dark-mode");
+    } else {
+      bodyElement.classList.remove("dark-mode");
+    }
   });
 };
 

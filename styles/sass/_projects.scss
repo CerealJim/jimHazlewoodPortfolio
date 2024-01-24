@@ -2,7 +2,7 @@
 PROJECT STYLES
 ===================== */
 .portfolio {
-  background-color: #f1f1f1;
+  background-color: $light-background;
   padding: 4rem 0;
 }
 
@@ -71,7 +71,7 @@ PROJECT STYLES
 
 .projectInfo a {
   font-weight: bold;
-  color: #003399;
+  color: $blue;
   transition: 0.5s ease;
 }
 .portfolioLinks a {
@@ -79,7 +79,7 @@ PROJECT STYLES
   font-size: 1rem;
   padding: 1rem 0;
   font-weight: bold;
-  color: #003399;
+  color: $blue;
   transition: 0.5s ease;
   display: flex;
   justify-content: center;

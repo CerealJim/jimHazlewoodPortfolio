@@ -109,7 +109,7 @@ ABOUT STYLES
   padding: 0.5rem 1rem;
   margin: 0.5rem 0;
   border-radius: 8px;
-  color: #003399;
+  color: $blue;
   font-weight: bold;
 }
 
@@ -127,7 +127,7 @@ ABOUT STYLES
   padding: 0;
   margin: 0;
   border-radius: 8px;
-  color: #003399;
+  color: $blue;
   font-weight: bold;
 }
 
@@ -164,7 +164,7 @@ ABOUT STYLES
   text-align: center;
   letter-spacing: 1px;
   font-family: "Roboto Slab", serif;
-  color: #003399;
+  color: $blue;
 }
 
 .aboutBox span {

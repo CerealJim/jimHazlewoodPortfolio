@@ -27,13 +27,13 @@ fieldset {
 
 h1 {
   font-size: 4rem;
-  text-shadow: 3px 3px #cccccc;
+  text-shadow: 3px 3px $light-grey;
 }
 
 h2 {
   display: inline-block;
   z-index: 1;
-  text-shadow: 2px 2px #cccccc;
+  text-shadow: 2px 2px $light-grey;
   font-weight: bold;
   font-size: 1.75rem;
   padding-bottom: 1rem;
@@ -42,8 +42,8 @@ h2 {
 
 h3,
 h4 {
-  color: #003399;
-  text-shadow: 2px 2px #cccccc;
+  color: $blue;
+  text-shadow: 2px 2px $light-grey;
   font-size: 1.5rem;
   letter-spacing: 1px;
   font-weight: normal;
@@ -51,7 +51,7 @@ h4 {
 }
 
 h4 {
-  color: #000000;
+  color: $black;
   text-transform: none;
 }
 

@@ -2,7 +2,10 @@
 HEADER STYLES
 ===================== */
 header {
-  background-color: #f1f1f1;
+  background-color: $light-background;
+  @at-root body.dark-mode & {
+    background-color: $slate-grey;
+  }
 }
 
 .headerNav {
@@ -37,14 +40,14 @@ header {
 .hamburger {
   display: none;
   font-size: 1.5rem;
-  color: #003399;
+  color: $blue;
   cursor: pointer;
   background-color: transparent;
 }
 
 .navLink,
 .hamburger {
-  color: #003399;
+  color: $blue;
   transition: 0.5s ease;
   padding: 1rem;
   text-transform: uppercase;
@@ -85,7 +88,7 @@ h3 {
   font-family: "Roboto", sans-serif;
   display: block;
   font-size: 1.75rem;
-  color: #003399;
+  color: $blue;
   font-weight: normal;
 }
 .firstName {
@@ -96,6 +99,10 @@ h3 {
   max-width: 500px;
   height: auto;
 }
+
+/* =====================
+dark mode toggle
+===================== */
 
 .modeToggleCheck {
   position: absolute;
@@ -109,13 +116,11 @@ h3 {
   display: none;
 }
 .toggleLabel {
-  width: 100px;
-  height: 50px;
+  width: 70px;
+  height: 30px;
   background: #96dcee;
   border-radius: 50px;
   border: 5px solid #72cce3;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
   -webkit-transition: all 250ms ease-in;
@@ -132,11 +137,11 @@ h3 {
   -webkit-transition: all 250ms ease-in;
   transition: all 250ms ease-in;
   content: "";
-  width: 38px;
-  height: 38px;
+  width: 21px;
+  height: 21px;
   border: 3px solid #f5eb71;
-  top: 1px;
-  left: 2px;
+  top: 0px;
+  left: 0px;
   position: absolute;
   border-radius: 38px;
   background: #fffaa8;
@@ -147,8 +152,8 @@ h3 {
   border-radius: 5px;
   position: relative;
   background: white;
-  left: 57px;
-  top: 17px;
+  left: 36px;
+  top: 10px;
   -webkit-transition: all 150ms ease-in;
   transition: all 150ms ease-in;
 }
@@ -158,9 +163,9 @@ h3 {
   top: -6px;
   width: 17px;
   height: 4px;
-  border-radius: 9px;
+  border-radius: 35%;
   background: white;
-  left: -8px;
+  left: -10px;
   -webkit-transition: all 150ms ease-in;
   transition: all 150ms ease-in;
 }
@@ -198,9 +203,9 @@ h3 {
   position: absolute;
   content: "";
   -webkit-box-shadow: #e8e8ea -13px 0 0 2px, #e8e8ea -19px 9px 0 -1px;
-  box-shadow: #e8e8ea -13px 0 0 2px, #e8e8ea -19px 9px 0 -1px;
-  left: 75px;
-  top: 11px;
+  box-shadow: #e8e8ea -15px 0 0 2px, #e8e8ea -10px 7px 0 0px;
+  left: 60px;
+  top: 5px;
   width: 4px;
   height: 4px;
   background: transparent;
@@ -213,69 +218,36 @@ h3 {
   opacity: 1;
 }
 .toggleCheckbox:checked + .toggleLabel .toggleLabelBackground {
-  left: 32px;
+  left: 30px;
   width: 3px;
 }
 .toggleCheckbox:checked + .toggleLabel .toggleLabelBackground::before {
   width: 3px;
   height: 3px;
-  top: -11px;
+  top: -8px;
 }
 .toggleCheckbox:checked + .toggleLabel .toggleLabelBackground::after {
   width: 3px;
   height: 3px;
   left: -18px;
-  top: 10px;
+  top: 4px;
 }
-@-webkit-keyframes reverse {
-  0% {
-    left: 50px;
-    width: 38px;
-  }
-  60% {
-    left: 20px;
-    width: 68px;
-  }
-  100% {
-    left: 2px;
-  }
-}
+
 @keyframes reverse {
   0% {
     left: 50px;
-    width: 38px;
   }
-  60% {
-    left: 20px;
-    width: 68px;
-  }
+
   100% {
     left: 2px;
-  }
-}
-@-webkit-keyframes switch {
-  0% {
-    left: 2px;
-  }
-  60% {
-    left: 2px;
-    width: 68px;
-  }
-  100% {
-    left: 50px;
-    width: 38px;
   }
 }
 @keyframes switch {
   0% {
     left: 2px;
   }
-  60% {
-    left: 2px;
-    width: 68px;
-  }
+
   100% {
-    left: 50px;
-    width: 38px;
+    left: 40px;
   }
 }

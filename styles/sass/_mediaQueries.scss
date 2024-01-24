@@ -48,7 +48,7 @@ MEDIA QUERIES - Desktop first to mobile
 
   .navLink {
     border-radius: 8px;
-    color: #ffffff;
+    color: $white;
   }
 
   .navLink {
@@ -72,7 +72,7 @@ MEDIA QUERIES - Desktop first to mobile
     z-index: 20;
   }
   .hamburger.active {
-    color: white;
+    color: $white;
   }
 
   /* .headerImg {
