@@ -1326,6 +1326,21 @@ textarea {
   display: inline-block;
 }
 
+.fa-file {
+  font-size: 36px;
+  position: relative;
+  top: -4px;
+}
+
+.fa-file:before {
+  color: #2c3e50;
+  max-height: 27px;
+}
+
+.dark-mode .fa-file:before {
+  color: #ffffff;
+}
+
 /* ========================================
 FOOTER SECTION
 ======================================== */
@@ -1524,7 +1539,7 @@ MEDIA QUERIES - Desktop first to mobile
     /* margin: 2rem 0; */
   }
   .socialMedia a:hover,
-.socialMedia a:focus {
+  .socialMedia a:focus {
     font-size: 2rem;
   }
   fieldset {
