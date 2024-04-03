@@ -1274,55 +1274,28 @@ form button:hover,
 form button:focus {
   background-color: #d5d5d5;
 } */
+/* Button Style */
 form button {
-  position: relative;
-  width: 100%;
-  max-width: 200px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(46, 140, 153, 0.57)), color-stop(92.65%, rgba(168, 173, 174, 0.781319)));
-  background: linear-gradient(180deg, rgba(46, 140, 153, 0.57) 0%, rgba(168, 173, 174, 0.781319) 92.65%);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  border-radius: 10px;
-  margin: 30px 0 0;
-  padding: 8px 8px;
-  z-index: 1;
-  color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
   cursor: pointer;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 22px;
-  color: black;
-  margin-right: 15px;
+  border: 2px solid #2c3e50;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #2c3e50;
+  -webkit-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  margin-top: 1rem;
 }
 
-form button::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: 10px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(8%, rgba(168, 173, 174, 0.781319)), to(rgba(46, 140, 153, 0.57)));
-  background: linear-gradient(180deg, rgba(168, 173, 174, 0.781319) 8%, rgba(46, 140, 153, 0.57) 100%);
-  z-index: -1;
-  -webkit-transition: opacity 0.5s linear;
-  transition: opacity 0.5s linear;
-  opacity: 0;
-}
-
-form button:hover::before,
-form button:focus::before {
-  opacity: 1;
+/* Button Hover State */
+form button:hover {
+  background-color: #2c3e50;
+  color: #fff;
 }
 
 .contactFormInput {
@@ -1601,6 +1574,18 @@ MEDIA QUERIES - Desktop first to mobile
   }
   .icon i {
     font-size: 1.75rem;
+  }
+  .form h3 {
+    font-size: 0.9rem;
+  }
+  .form h3::after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 70%;
+    min-width: 100px;
+    padding-top: 0.25rem;
+    border-bottom: 2px solid #000;
   }
 }
 body.dark-mode header {

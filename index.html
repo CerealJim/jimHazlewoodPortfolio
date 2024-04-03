@@ -386,7 +386,7 @@
         <h2>Let's Talk!</h2>
         <div class="contactMe">
           <div class="contactInfo">
-            <p>I'm always excited to connect and discuss your current, past, or future projects. Don't hesitate to reach out with any inquiries or simply to say hello. You can drop me a note here or connect with me on social media. Looking forward to chatting with you!</p>
+            <p>I'm always excited to connect and discuss current, past, or future projects. Don't hesitate to reach out with any inquiries or simply to say hello. You can drop me a note here or connect with me on social media. Looking forward to chatting with you!</p>
             <nav class="socialMedia">
               <ul>
                 <li><a href="https://www.linkedin.com/in/jim-h-1000/" target="_blank" aria-label="Linkedin Profile"><i class="devicon-linkedin-plain colored"></i></a>
@@ -401,7 +401,7 @@
           <div class="form">
           <fieldset data-aos="fade-up">
             <legend class="sr-only">Write a message!</legend>
-            <form action="https://formsubmit.co/jim_hazlewood4@hotmail.com" method="POST" class="contactForm" name="contactForm">
+            <!-- <form action="https://formsubmit.co/jim_hazlewood4@hotmail.com" method="POST" class="contactForm" name="contactForm">
               <div class="contactFormTop">
                 <h3>Send me a message</h3>
                 <div class="name contactFormInput">
@@ -421,7 +421,22 @@
                 </div>
               </div>
               <button type="submit">Send</button>
+              </form> -->
+
+              <form name="contact" method="POST" data-netlify="true"  class="contactForm" name="contactForm">
+                <h3>Send me a message</h3>
+                <p class="name contactFormInput">
+                  <label>Your Name:</label><input type="text" name="name"  name="name" required/>
+                </p>
+                <p class="email contactFormInput">
+                  <label>Your Email:</label> <input type="email" name="email" />
+                </p>
+                <p>
+                  <label>Message:</label> <div class="text-area"><textarea name="message" class="message"></textarea></div>
+                </p>
+                <button type="submit">Send</button>
               </form>
+
           </fieldset>
         </div>
         </div>

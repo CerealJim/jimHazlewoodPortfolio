@@ -86,52 +86,75 @@ form button:focus {
   background-color: #d5d5d5;
 } */
 
+// form button {
+//   position: relative;
+//   width: 100%;
+//   max-width: 200px;
+//   background: linear-gradient(
+//     180deg,
+//     rgba(46, 140, 153, 0.57) 0%,
+//     rgba(168, 173, 174, 0.781319) 92.65%
+//   );
+//   transition: 0.3s;
+//   border-radius: 10px;
+//   margin: 30px 0 0;
+//   padding: 8px 8px;
+//   z-index: 1;
+//   color: black;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   cursor: pointer;
+//   font-weight: 700;
+//   font-size: 20px;
+//   line-height: 22px;
+//   color: black;
+//   margin-right: 15px;
+// }
+// form button::before {
+//   position: absolute;
+//   content: "";
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   border-radius: 10px;
+//   background: linear-gradient(
+//     180deg,
+//     rgba(168, 173, 174, 0.781319) 8%,
+//     rgba(46, 140, 153, 0.57) 100%
+//   );
+//   z-index: -1;
+//   transition: opacity 0.5s linear;
+//   opacity: 0;
+// }
+
+// form button:hover::before,
+// form button:focus::before {
+//   opacity: 1;
+// }
+
+/* Button Style */
 form button {
-  position: relative;
-  width: 100%;
-  max-width: 200px;
-  background: linear-gradient(
-    180deg,
-    rgba(46, 140, 153, 0.57) 0%,
-    rgba(168, 173, 174, 0.781319) 92.65%
-  );
-  transition: 0.3s;
-  border-radius: 10px;
-  margin: 30px 0 0;
-  padding: 8px 8px;
-  z-index: 1;
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
   cursor: pointer;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 22px;
-  color: black;
-  margin-right: 15px;
-}
-form button::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: 10px;
-  background: linear-gradient(
-    180deg,
-    rgba(168, 173, 174, 0.781319) 8%,
-    rgba(46, 140, 153, 0.57) 100%
-  );
-  z-index: -1;
-  transition: opacity 0.5s linear;
-  opacity: 0;
+  border: 2px solid $slate-grey;
+  border-radius: 5px;
+  background-color: #fff;
+  color: $slate-grey;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  margin-top: 1rem;
 }
 
-form button:hover::before,
-form button:focus::before {
-  opacity: 1;
+/* Button Hover State */
+form button:hover {
+  background-color: $slate-grey;
+  color: #fff;
 }
 
 .contactFormInput {
