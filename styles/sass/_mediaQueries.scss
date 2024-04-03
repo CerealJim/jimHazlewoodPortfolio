@@ -140,7 +140,7 @@ MEDIA QUERIES - Desktop first to mobile
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 10% auto;
+    margin: 1rem 10% auto;
     /* color: black; */
     /* font-size: 1.5rem; */
     /* gap: 2rem; */
@@ -152,6 +152,7 @@ MEDIA QUERIES - Desktop first to mobile
   }
   fieldset {
     width: 100%;
+    padding: 0.5rem;
   }
 }
 

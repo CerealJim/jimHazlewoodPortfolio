@@ -1173,6 +1173,10 @@ PROJECT STYLES
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .contactInfo {
@@ -1189,7 +1193,7 @@ PROJECT STYLES
 }
 
 .contactInfo p {
-  margin: 2rem 0;
+  margin: 2rem 0 0;
   /* width: calc(50% - 3rem); */
   margin-right: 3rem;
 }
@@ -1198,6 +1202,9 @@ PROJECT STYLES
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: black;
   font-size: 1.5rem;
   gap: 2rem;
@@ -1221,7 +1228,38 @@ PROJECT STYLES
 fieldset {
   width: 100%;
   margin-bottom: 2rem;
-  border: none;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #000;
+  max-width: 767px;
+  margin: 0 2rem;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.form h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #000;
+}
+
+.form h3::after {
+  content: "";
+  display: block;
+  margin: auto;
+  width: 50%;
+  min-width: 330px;
+  padding-top: 0.25rem;
+  border-bottom: 2px solid #000;
 }
 
 /* form button {
@@ -1532,7 +1570,7 @@ MEDIA QUERIES - Desktop first to mobile
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 0 10% auto;
+    margin: 1rem 10% auto;
     /* color: black; */
     /* font-size: 1.5rem; */
     /* gap: 2rem; */
@@ -1544,6 +1582,7 @@ MEDIA QUERIES - Desktop first to mobile
   }
   fieldset {
     width: 100%;
+    padding: 0.5rem;
   }
 }
 /* responsive design for phones */
