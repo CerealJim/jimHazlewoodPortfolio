@@ -1667,6 +1667,18 @@ body.dark-mode .contact h2 {
 body.dark-mode .contact h2::after {
   background-color: #2c3e50;
 }
+body.dark-mode .contact fieldset {
+  border: 1px solid #5eff94;
+}
+body.dark-mode .contact form h3 {
+  color: #d3d3d3;
+  text-shadow: none;
+}
+body.dark-mode .contact form h3::after {
+  background-color: #ffffff;
+  padding-top: 1px;
+  margin-top: 10px;
+}
 body.dark-mode .contact form label {
   color: #d3d3d3;
 }
@@ -1685,4 +1697,8 @@ body.dark-mode .contact button {
 }
 body.dark-mode .contact button::before {
   background: #d3d3d3;
+}
+body.dark-mode .contact button:hover {
+  text-decoration: underline;
+  color: #004c4c;
 }

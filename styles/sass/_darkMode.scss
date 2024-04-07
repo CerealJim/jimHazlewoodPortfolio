@@ -91,7 +91,19 @@ body.dark-mode {
         background-color: $slate-grey;
       }
     }
+    fieldset {
+      border: 1px solid $mint-green;
+    }
     form {
+      h3 {
+        color: $light-d3;
+        text-shadow: none;
+        &::after {
+          background-color: $white;
+          padding-top: 1px;
+          margin-top: 10px;
+        }
+      }
       label {
         color: $light-d3;
       }
@@ -111,6 +123,9 @@ body.dark-mode {
         background: $light-d3;
       }
       &:hover {
+        text-decoration: underline;
+        // background-color: $dark-teal;
+        color: $dark-teal;
       }
     }
   }
