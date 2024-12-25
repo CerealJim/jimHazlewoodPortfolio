@@ -1,0 +1,14 @@
+// Variables and colors first
+@import './sass/_colors';
+
+// Then other styles
+@import './sass/_setup';
+@import './sass/_general';
+@import './sass/_header';
+@import './sass/_about';
+@import './sass/_skills';
+@import './sass/_projects';
+@import './sass/_contact';
+@import './sass/_footer';
+@import './sass/_mediaQueries';
+@import './sass/_darkMode'; 
