@@ -1,3 +1,6 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 //Global app object (store all Methods/variables/etc.)
 const app = {};
 
@@ -81,3 +84,97 @@ function gtag() {
 gtag("js", new Date());
 
 gtag("config", "G-176EJWXYPS");
+
+// Define interfaces/types
+interface AppInterface {
+  navHamburger: HTMLElement | null;
+  navList: HTMLElement | null;
+  navLink: NodeListOf<Element>;
+  contactMessages: any[];
+  init: () => void;
+  hamburgerClick: () => void;
+  linkClick: () => void;
+  toggleMode: () => void;
+}
+
+// Convert to Vue composition API
+import { onMounted } from 'vue';
+
+export default {
+  setup() {
+    const app: AppInterface = {
+      navHamburger: null,
+      navList: null,
+      navLink: document.querySelectorAll(".navLink"),
+      contactMessages: [],
+
+      init() {
+        this.navHamburger = document.querySelector(".hamburger");
+        this.navList = document.querySelector(".navList");
+        this.hamburgerClick();
+        this.linkClick();
+        this.toggleMode();
+      },
+
+      hamburgerClick() {
+        this.navHamburger?.addEventListener("click", () => {
+          this.navList?.classList.toggle("active");
+          this.navHamburger?.classList.toggle("active");
+        });
+      },
+
+      linkClick() {
+        this.navLink.forEach((navLinks) => {
+          navLinks.addEventListener("click", () => {
+            this.navList?.classList.toggle("active");
+            this.navHamburger?.classList.toggle("active");
+          });
+        });
+      },
+
+      toggleMode() {
+        const modeCheckbox = document.getElementById("toggle") as HTMLInputElement;
+        const bodyElement = document.querySelector("body");
+
+        if (modeCheckbox?.checked) {
+          bodyElement?.classList.add("dark-mode");
+        }
+
+        modeCheckbox?.addEventListener("click", () => {
+          if (modeCheckbox.checked) {
+            bodyElement?.classList.add("dark-mode");
+          } else {
+            bodyElement?.classList.remove("dark-mode");
+          }
+        });
+      }
+    };
+
+    // Initialize on component mount
+    onMounted(() => {
+      app.init();
+      
+      // AOS initialization
+      AOS.init({
+        disable: false,
+        startEvent: "DOMContentLoaded",
+        // ... rest of AOS config ...
+      });
+    });
+
+    // Google Analytics
+    declare global {
+      interface Window {
+        dataLayer: any[];
+        gtag: (...args: any[]) => void;
+      }
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(...args: any[]) {
+      window.dataLayer.push(args);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-176EJWXYPS");
+  }
+};

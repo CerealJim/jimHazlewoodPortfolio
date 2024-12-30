@@ -1,14 +1,9 @@
 <template>
-  <section class="about" id="about">
-    <div class="wrapper">
-      <div class="introContainer">
-        <div class="introText">
-          <p class="helloText">Hello! I'm Jim</p>
-          <p>
-            I'm a front-end web developer with a passion for creating engaging,
-            responsive websites that provide an excellent user experience.
-          </p>
-        </div>
+  <section class="bg-gray-100 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h2 class="text-3xl font-roboto-slab font-bold text-gray-900">About</h2>
+        <p class="mt-4 text-xl font-nunito text-gray-600">FrontEnd Developer</p>
       </div>
     </div>
   </section>
@@ -18,7 +13,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "About-me",
+  name: "AboutMe",
 });
 </script>
 

@@ -4,10 +4,7 @@
       <nav class="headerNav">
         <a href="/" class="logoLink">
           <div class="logoContainer">
-            <img
-              src="@/assets/jhLogoCrop.jpg"
-              alt="an orange logo with the initials J H"
-            />
+            <img src="@/assets/jhLogoCrop.jpg" alt="JH" />
           </div>
         </a>
         <button
